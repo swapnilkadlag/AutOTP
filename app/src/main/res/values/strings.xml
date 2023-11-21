@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AutOTP</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="editor">Editor</string>
+    <string name="ruleId">rule_id</string>
 </resources>
