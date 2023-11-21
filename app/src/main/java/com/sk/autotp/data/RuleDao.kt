@@ -27,7 +27,7 @@ interface RuleDao {
     fun getAll(): Flow<List<Rule>>
 
     @Query("SELECT * FROM rule WHERE enabled IS 1")
-    fun getAllEnabled(): Flow<List<Rule>>
+    suspend fun getAllEnabled(): List<Rule>
 
     @Query("UPDATE rule SET enabled = :enabled WHERE id = :ruleId")
     fun updateStatus(ruleId: UUID, enabled: Boolean)
