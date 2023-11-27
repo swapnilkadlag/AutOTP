@@ -10,12 +10,8 @@ class Repository @Inject constructor(
     private val scope: CoroutineScope,
 ) {
 
-    fun insertRule(rule: Rule) {
-        scope.launch { db.ruleDao.insert(rule) }
-    }
-
-    fun updateRule(rule: Rule) {
-        scope.launch { db.ruleDao.update(rule) }
+    fun upsertRule(rule: Rule) {
+        scope.launch { db.ruleDao.upsert(rule) }
     }
 
     fun deleteRule(rule: Rule) {
