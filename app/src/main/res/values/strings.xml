@@ -1,7 +1,21 @@
 <resources>
     <string name="app_name">AutOTP</string>
-    <string name="home">Home</string>
+    <string name="rules">Rules</string>
     <string name="history">History</string>
     <string name="editor">Editor</string>
-    <string name="ruleId">rule_id</string>
+    <string name="rule_id">rule_id</string>
+    <string name="add_rule">Add Rule</string>
+    <string name="rule">Rule</string>
+    <string name="no_rules_added">No rules added</string>
+    <string name="tap_plus_to_get_started">Tap on + to get started</string>
+    <string name="forward_messages">Forward messages</string>
+    <string name="title">Title</string>
+    <string name="keywords">Keywords</string>
+    <string name="prefix">Prefix</string>
+    <string name="forward_to">Forward to</string>
+    <string name="add_multiple_keywords">Add multiple keywords by separating them with a \',\'</string>
+    <string name="notify_after_forwarding">Notify after forwarding</string>
+    <string name="name">Name</string>
+    <string name="number">Number</string>
+    <string name="no_history_found">No history found</string>
 </resources>
