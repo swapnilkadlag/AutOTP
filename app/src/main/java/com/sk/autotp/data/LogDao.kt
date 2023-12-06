@@ -12,5 +12,8 @@ interface LogDao {
     suspend fun insert(log: Log)
 
     @Query("SELECT * FROM log ORDER BY sentOn DESC")
-    fun getAll(): Flow<Log>
+    fun getAll(): Flow<List<Log>>
+
+    @Query("DELETE FROM log")
+    fun deleteAll()
 }

@@ -33,4 +33,8 @@ class Repository @Inject constructor(
     }
 
     fun getLogs() = db.logDao.getAll()
+
+    fun deleteLogs() {
+        scope.launch { db.logDao.deleteAll() }
+    }
 }
