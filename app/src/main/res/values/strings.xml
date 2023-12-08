@@ -18,4 +18,5 @@
     <string name="name">Name</string>
     <string name="number">Number</string>
     <string name="no_history_found">No history found</string>
+    <string name="listening_for_incoming_messages">Listening for incoming messages</string>
 </resources>
