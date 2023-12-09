@@ -26,7 +26,7 @@
         android:windowSoftInputMode="adjustResize"
         android:theme="@style/Theme.AutOTP"
         tools:targetApi="31">
-        <service android:name=".services.SMSForegroundService" android:enabled="true"/>
+        <service android:name=".services.SmsForegroundService" android:enabled="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
