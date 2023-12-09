@@ -168,8 +168,8 @@ private fun Rules(
     onRuleStatusChange: (Rule, Boolean) -> Unit,
 ) {
     LazyColumn(modifier = Modifier.padding(), state = scrollState) {
-        items(rules) {
-            RuleItem(rule = it, onRuleClick = onRuleClick, onRuleStatusChange = onRuleStatusChange)
+        items(rules) { rule ->
+            Rule(rule = rule, onRuleClick = { onRuleClick(rule) }, onRuleStatusChange = onRuleStatusChange)
         }
         item {
             VerticalSpace(height = Margin.FabHeight)
@@ -178,12 +178,12 @@ private fun Rules(
 }
 
 @Composable
-private fun RuleItem(
+private fun Rule(
     rule: Rule,
-    onRuleClick: (Rule) -> Unit,
+    onRuleClick: () -> Unit,
     onRuleStatusChange: (Rule, Boolean) -> Unit,
 ) {
-    Column(modifier = Modifier.clickable { onRuleClick(rule) }) {
+    Column(modifier = Modifier.clickable { onRuleClick() }) {
         Row(
             modifier = Modifier.padding(Padding.Large),
             verticalAlignment = Alignment.CenterVertically,
