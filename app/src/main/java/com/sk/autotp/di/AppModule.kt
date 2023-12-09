@@ -1,6 +1,7 @@
 package com.sk.autotp.di
 
 import android.content.Context
+import android.telephony.SmsManager
 import androidx.room.Room
 import com.sk.autotp.data.AutOTPDatabase
 import dagger.Module
@@ -31,5 +32,11 @@ object AppModule {
     @Provides
     fun providesCoroutineScope(): CoroutineScope {
         return CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    }
+
+    @Singleton
+    @Provides
+    fun provideSmsManager(@ApplicationContext context: Context): SmsManager {
+        return context.getSystemService(SmsManager::class.java)
     }
 }
