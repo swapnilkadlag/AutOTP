@@ -37,4 +37,8 @@ class Repository @Inject constructor(
     fun deleteLogs() {
         scope.launch { db.logDao.deleteAll() }
     }
+
+    fun deleteLog(log: Log) {
+        scope.launch { db.logDao.delete(log) }
+    }
 }
