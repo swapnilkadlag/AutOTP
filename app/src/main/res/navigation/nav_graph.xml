@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navGraph"
+    app:startDestination="@id/rulesScreen">
+
+    <fragment
+        android:id="@+id/historyScreen"
+        android:name="com.sk.autotp.screens.history.HistoryFragment"
+        android:label="@string/history" />
+
+    <fragment
+        android:id="@+id/rulesScreen"
+        android:name="com.sk.autotp.screens.rules.RulesFragment"
+        android:label="@string/rules">
+
+        <action
+            android:id="@+id/action_rulesScreen_to_editorScreen"
+            app:destination="@id/editorScreen"
+            app:enterAnim="@anim/enter_from_bottom"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/exit_to_bottom" />
+
+        <action
+            android:id="@+id/action_rulesScreen_to_historyScreen"
+            app:destination="@id/historyScreen"
+            app:enterAnim="@anim/enter_from_bottom"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/exit_to_bottom" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/editorScreen"
+        android:name="com.sk.autotp.screens.editor.EditorFragment"
+        android:label="@string/editor">
+
+        <argument
+            android:name="rule_id"
+            android:defaultValue="@null"
+            app:argType="java.util.UUID"
+            app:nullable="true" />
+
+    </fragment>
+
+</navigation>
